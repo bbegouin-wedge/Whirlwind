@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  backend:
+    build: .
+    security_opt: # options needed for gdb debugging
+      - seccomp:unconfined
+      - apparmor:unconfined
+    container_name: whirlwind_container
+    command: tail -f /dev/null
+    ports:
+      - "7776:22"
+      - "7777:7777"
+    volumes:
+      - .:/home/whirlwind/Back

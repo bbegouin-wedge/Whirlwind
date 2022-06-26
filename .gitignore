@@ -1,3 +1,8 @@
+cmake-build-debug
+Whirlwind
+Makefile
+.idea
+
 # Prerequisites
 *.d
 
